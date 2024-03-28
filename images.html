@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image tag</title>
+    <style>
+        body{
+            background-color: #414141;
+        }
+    </style>
+</head>
+<body>
+    <img src="htmlcours.jpg" width="400px" alt="no image">
+    <!-- <img src="https://images.pexels.com/photos/20637686/pexels-photo-20637686/free-photo-of-below-sunshine.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="400px" alt=""> -->
+    <picture>
+        <source media="(min-width:650px)" srcset="htmlcours.jpg" />
+        <source media="(min-width:450px)" srcset="htmlcourse2.jpg" />
+        <img src="htmlcours.jpg" alt="no image">
+    </picture>
+    <!-- an image map generator-->
+    <img src="htmlcourse.jpg" usemap="#image-map">
+
+    <map name="image-map">
+        <area onclick="one()" target="" alt="" title="" href="" coords="274,47,192,80" shape="rect">
+        <area onclick="two()" target="" alt="" title="" href="" coords="178,141,294,201" shape="rect">
+    </map>
+    <script>
+        function one(){
+            alert("you clicked on one")
+        }
+        function two(){
+            alert("you clicked on two")
+        }
+    </script>
+</body>
+</html>
